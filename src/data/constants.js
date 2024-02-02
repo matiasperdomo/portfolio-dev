@@ -445,7 +445,7 @@ export const projects = [
     title: "Project Name",
     date: "2021",
     description:
-      " A Todo Web App made with React JS, Redux, and Material UI. It has a login page where users can log in with their Google account. It has a sidebar where users can see all the tasks and can create a new task. It has a calendar where users can see all the tasks on a particular date. It has a search bar where users can search for a particular task.",
+      " It has a sidebar where users can see all the tasks and can create a new task. It has a calendar where users can see all the tasks on a particular date. It has a search bar where users can search for a particular task.",
     image:
       "https://htmlburger.com/blog/wp-content/uploads/2023/04/modern-website-design-examples.jpg",
     tags: ["React Js", "Local Storage", "AWS Auth", "Node JS"],
