@@ -447,7 +447,7 @@ export const projects = [
     description:
       " Creation of product administration panel for web store. Development of permissions, user roles, product categories, etc.",
     image:
-      "https://htmlburger.com/blog/wp-content/uploads/2023/04/modern-website-design-examples.jpg",
+      "https://raw.githubusercontent.com/matiasperdomo/portfolio-dev/main/src/images/projects/hyperx3.png",
     tags: ["PHP", "MySQL", "XAMPP", "Bootstrap"],
     category: "web app",
     github: "http://hyperx.great-site.net/",
@@ -460,7 +460,7 @@ export const projects = [
     description:
       "Creation of website in ecommerce format with cart, linked to MySQL database",
     image:
-      "https://htmlburger.com/blog/wp-content/uploads/2023/04/modern-website-design-examples.jpg",
+      "https://raw.githubusercontent.com/matiasperdomo/portfolio-dev/main/src/images/projects/hyperx2.png",
     tags: ["HTML", "CSS", "Bootstrap", "JavaScript", "PHP", "MySQL"],
     category: "web app",
     github: "http://hyperx.great-site.net/",
