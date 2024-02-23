@@ -43,7 +43,7 @@ export const Desc = styled.div`
     font-size: 18px;
     text-align: center;
     max-width: 600px;
-    color: ${({ theme }) => theme.text_secondary};
+    color: ${({ theme }) => theme.text_primary};
     @media (max-width: 768px) {
         font-size: 16px;
     }
@@ -97,8 +97,8 @@ const SkillList = styled.div`
 const SkillItem = styled.div`
   font-size: 16px;
   font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 80};
-  border: 1px solid ${({ theme }) => theme.text_primary + 80};
+  color: ${({ theme }) => theme.light};
+  border: 1px solid ${({ theme }) => theme.white + 90};
   border-radius: 12px;
   padding: 12px 16px;
   display: flex;

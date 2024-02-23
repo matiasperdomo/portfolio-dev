@@ -39,6 +39,7 @@ export const NavLogo = styled(LinkR)`
   }
 `;
 export const Span = styled.div`
+    color: ${({ theme }) => theme.text_white};
     padding: 0 4px;
     font-weight: bold;
     font-size: 18px;
@@ -58,7 +59,7 @@ export const NavItems = styled.ul`
 `;
 
 export const NavLink = styled.a`
-    color: ${({ theme }) => theme.text_primary};
+    color: white;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ease-in-out;

@@ -115,7 +115,7 @@ export const Img = styled.img`
 export const Title = styled.div`
   font-weight: 700;
   font-size: 50px;
-  color: ${({ theme }) => theme.text_primary};
+  color: ${({ theme }) => theme.white};
   line-height: 68px;
   @media (max-width: 960px) {
     text-align: center;
@@ -133,7 +133,7 @@ export const TextLoop = styled.div`
   font-size: 32px;
   display: flex;
   gap: 12px;
-  color: ${({ theme }) => theme.text_primary};
+  color: ${({ theme }) => theme.white};
   line-height: 68px;
   @media (max-width: 960px) {
     text-align: center;
@@ -154,7 +154,7 @@ export const SubTitle = styled.div`
   font-size: 20px;
   line-height: 32px;
   margin-bottom: 42px;
-  color: ${({ theme }) => theme.text_primary + 95};
+  color: ${({ theme }) => theme.white + 96};
 
   @media (max-width: 960px) {
     text-align: center;

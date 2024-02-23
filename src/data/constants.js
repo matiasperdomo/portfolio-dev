@@ -9,8 +9,8 @@ export const Bio = {
     "I am passionate about technology and programming! I am 23 years old, I specialize in Front End production, although I have taken courses and careers focused on all branches of programming, training me to become a Full Stack programmer. Always willing to learn new knowledge and give the best of himself.",
   github: "https://github.com/matiasperdomo",
   resume:
-    "https://www.linkedin.com/in/matias-perdomo-3bb239188/",
-  linkedin: "https://www.linkedin.com/in/matias-perdomo-3bb239188/",
+    "https://www.linkedin.com/in/perdomomatias/",
+  linkedin: "https://www.linkedin.com/in/perdomomatias/",
   twitter: "https://twitter.com/matiasperdomodj",
   insta: "https://www.instagram.com/matiasperdomodj/",
   facebook: "https://www.facebook.com/perdomomatias/",
@@ -334,7 +334,7 @@ export const projects = [
       {
         name: "Matias Perdomo",
         img: "https://raw.githubusercontent.com/matiasperdomo/portfolio-dev/main/src/images/profile-image.jpg",
-        linkedin: "https://www.linkedin.com/in/matias-perdomo-3bb239188/",
+        linkedin: "https://www.linkedin.com/in/perdomomatias/",
         github: "https://github.com/matiasperdomo/",
       },
     ],
@@ -361,7 +361,7 @@ export const projects = [
       {
         name: "Matias Perdomo",
         img: "https://raw.githubusercontent.com/matiasperdomo/portfolio-dev/main/src/images/profile-image.jpg",
-        linkedin: "https://www.linkedin.com/in/matias-perdomo-3bb239188/",
+        linkedin: "https://www.linkedin.com/in/perdomomatias/",
         github: "https://github.com/matiasperdomo/",
       },
     ],
@@ -382,7 +382,7 @@ export const projects = [
       {
         name: "Matias Perdomo",
         img: "https://raw.githubusercontent.com/matiasperdomo/portfolio-dev/main/src/images/profile-image.jpg",
-        linkedin: "https://www.linkedin.com/in/matias-perdomo-3bb239188/",
+        linkedin: "https://www.linkedin.com/in/perdomomatias/",
         github: "https://github.com/matiasperdomo/",
       },
       {
@@ -442,29 +442,29 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Project Name",
-    date: "2021",
+    title: "Dashboard - Product Manager PHP",
+    date: "2022",
     description:
-      " It has a sidebar where users can see all the tasks and can create a new task. It has a calendar where users can see all the tasks on a particular date. It has a search bar where users can search for a particular task.",
+      " Creation of product administration panel for web store. Development of permissions, user roles, product categories, etc.",
     image:
       "https://htmlburger.com/blog/wp-content/uploads/2023/04/modern-website-design-examples.jpg",
-    tags: ["React Js", "Local Storage", "AWS Auth", "Node JS"],
+    tags: ["PHP", "MySQL", "XAMPP", "Bootstrap"],
     category: "web app",
-    github: "",
-    webapp: "",
+    github: "http://hyperx.great-site.net/",
+    webapp: "http://hyperx.great-site.net/",
   },
   {
     id: 6,
-    title: "Project Name",
-    date: "2021",
+    title: "HyperX - Store / Cart",
+    date: "2022",
     description:
-      "A simple react app that shows the characters of the famous TV series Breaking Bad. It uses the Breaking Bad API to fetch the data. It also has a search bar to search for a particular character.",
+      "Creation of website in ecommerce format with cart, linked to MySQL database",
     image:
       "https://htmlburger.com/blog/wp-content/uploads/2023/04/modern-website-design-examples.jpg",
-    tags: ["React Js", "API", "Axios", "Node JS"],
-    category: "others",
-    github: "",
-    webapp: "",
+    tags: ["HTML", "CSS", "Bootstrap", "JavaScript", "PHP", "MySQL"],
+    category: "web app",
+    github: "http://hyperx.great-site.net/",
+    webapp: "http://hyperx.great-site.net/",
   },
 ];
 

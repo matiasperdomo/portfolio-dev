@@ -7,14 +7,16 @@ import { Bio } from '../../data/constants';
 import { Close, CloseRounded } from '@mui/icons-material';
 import { useTheme } from 'styled-components';
 
-const Navbar = () => {
+import ReactSwitch from 'react-switch';
+
+const Navbar = ({darkMode, setDarkMode}) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const theme = useTheme()
   return (
     <Nav>
       <NavbarContainer>
         <NavLogo to='/'>
-          <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }}>
+          <a style={{ display: "flex", alignItems: "center", color:"white", marginBottom: '20;', cursor: 'pointer' }}>
             <DiCodeBadge size="3rem" /> <Span>Matias Perdomo</Span>
           </a>
         </NavLogo>
@@ -30,9 +32,77 @@ const Navbar = () => {
           <NavLink href='#projects'>Projects</NavLink>
           <NavLink href='#education'>Education</NavLink>
           <NavLink href='#contact'>Contact</NavLink>
+          <NavLink style={{ display: "flex", flex: "column", justifyContent: "center", alignItems: "center" }}>
+            <ReactSwitch onChange={() => setDarkMode(!darkMode)} checked={darkMode} handleDiameter={15} onColor="#854CE6"
+            uncheckedIcon={
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100%",
+                  fontSize: 15,
+                  color: "orange",
+                  paddingRight: 2
+                }}
+              >
+                ☀️
+              </div>
+            }
+            checkedIcon={
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100%",
+                  fontSize: 15,
+                  color: "orange",
+                  paddingRight: 2
+                }}
+              >
+                🌙
+              </div>
+            }/>
+          </NavLink>
+          <NavLink style={{ display: "flex", flex: "column", justifyContent: "center", alignItems: "center" }}>
+            <ReactSwitch handleDiameter={15} onColor="#854CE6"
+            uncheckedIcon={
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100%",
+                  fontSize: 15,
+                  color: "orange",
+                  paddingRight: 2
+                }}
+              >
+                EN
+              </div>
+            }
+            checkedIcon={
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100%",
+                  fontSize: 15,
+                  color: "orange",
+                  paddingRight: 2
+                }}
+              >
+                EN
+              </div>
+            }/>
+          </NavLink>
         </NavItems>
+        
+
         <ButtonContainer>
-          <GitHubButton href={Bio.github} target="_blank"><FaGithub/> Github Profile</GitHubButton>
+          <GitHubButton style={{backgroundColor: "#1C1C27"}} href={Bio.github} target="_blank"><FaGithub/> Github Profile</GitHubButton>
         </ButtonContainer>
         {
           isOpen &&

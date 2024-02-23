@@ -34,7 +34,7 @@ position: relative;
 const Title = styled.div`
   font-size: 28px;
   font-weight: 600;
-  color: ${({ theme }) => theme.text_primary};
+  color: ${({ theme }) => theme.white};
   margin: 8px 6px 0px 6px;
   @media only screen and (max-width: 600px) {
       font-size: 24px;
@@ -46,7 +46,7 @@ const Date = styled.div`
     font-size: 16px;
     margin: 2px 6px;
     font-weight: 400;
-    color: ${({ theme }) => theme.text_secondary};
+    color: ${({ theme }) => theme.light + 90};
     @media only screen and (max-width: 768px){
         font-size: 12px;
     }
@@ -57,7 +57,7 @@ const Date = styled.div`
 const Desc = styled.div`
     font-size: 16px;
     font-weight: 400;
-    color: ${({ theme }) => theme.text_primary};
+    color: ${({ theme }) => theme.light};
     margin: 8px 6px;
     @media only screen and (max-width: 600px) {
         font-size: 14px;
@@ -76,7 +76,7 @@ const Image = styled.img`
 const Label = styled.div`
     font-size: 20px;
     font-weight: 600;
-    color: ${({ theme }) => theme.text_primary};
+    color: ${({ theme }) => theme.white};
     margin: 8px 6px;
     @media only screen and (max-width: 600px) {
         font-size: 16px;
@@ -96,7 +96,7 @@ const Tags = styled.div`
 const Tag = styled.div`
     font-size: 14px;
     font-weight: 400;
-    color: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.white + 99};
     margin: 4px;
     padding: 4px 8px;
     border-radius: 8px;
@@ -140,7 +140,7 @@ const MemberName = styled.div`
     font-size: 16px;
     font-weight: 500;
     width: 200px;
-    color: ${({ theme }) => theme.text_primary};
+    color: ${({ theme }) => theme.white};
     @media only screen and (max-width: 600px) {
         font-size: 14px;
     }
@@ -159,13 +159,13 @@ const Button = styled.a`
     text-align: center;
     font-size: 16px;
     font-weight: 600;
-    color: ${({ theme }) => theme.text_primary};
+    color: ${({ theme }) => theme.white};
     padding: 12px 16px;
     border-radius: 8px;
     background-color: ${({ theme }) => theme.primary};
     ${({ dull, theme }) => dull && `
         background-color: ${theme.bgLight};
-        color: ${theme.text_secondary};
+        color: ${theme.text_primary};
         &:hover {
             background-color: ${({ theme }) => theme.bg + 99};
         }
@@ -214,10 +214,10 @@ const index = ({ openModal, setOpenModal }) => {
                                     <Member>
                                         <MemberImage src={member.img} />
                                         <MemberName>{member.name}</MemberName>
-                                        <a href={member.github} target="new" style={{textDecoration: 'none', color: 'inherit'}}>
+                                        <a href={member.github} target="new" style={{textDecoration: 'none', color: 'white'}}>
                                             <GitHub />
                                         </a>
-                                        <a href={member.linkedin} target="new" style={{textDecoration: 'none', color: 'inherit'}}>
+                                        <a href={member.linkedin} target="new" style={{textDecoration: 'none', color: 'white'}}>
                                             <LinkedIn />
                                         </a>
                                     </Member>
