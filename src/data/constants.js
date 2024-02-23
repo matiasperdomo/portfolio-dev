@@ -276,7 +276,16 @@ export const experiences = [
 
 export const education = [
   {
-    id: 0,
+    id: 6,
+    img: "https://raw.githubusercontent.com/matiasperdomo/portfolio-dev/main/src/images/education/logo-coder.png",
+    school: "CoderHouse",
+    date: "2024",
+    grade: "",
+    desc: "React Native, Android Studio, Redux, Firebase",
+    degree: "Desarrollo de aplicaciones",
+  },
+  {
+    id: 7,
     img: "https://raw.githubusercontent.com/matiasperdomo/portfolio-dev/main/src/images/education/logo-davinci.png",
     school: "Escuela Da Vinci",
     date: "2021 - 2023",
@@ -285,7 +294,7 @@ export const education = [
     degree: "Analista de Sistemas",
   },
   {
-    id: 1,
+    id: 8,
     img: "https://raw.githubusercontent.com/matiasperdomo/portfolio-dev/main/src/images/education/logo-educacionit.png",
     school: "Educacion IT",
     date: "2021 - 2024",
@@ -294,7 +303,7 @@ export const education = [
     degree: "Front End Web Developer",
   },
   {
-    id: 2,
+    id: 9,
     img: "https://raw.githubusercontent.com/matiasperdomo/portfolio-dev/main/src/images/education/logo-informatica.png",
     school: "Facultad de Informatica - UNLP",
     date: "2018 - 2020",
@@ -303,7 +312,7 @@ export const education = [
     degree: "Licenciatura en Informatica",
   },
   {
-    id: 3,
+    id: 10,
     img: "https://raw.githubusercontent.com/matiasperdomo/portfolio-dev/main/src/images/education/logo-bivongi.png",
     school: "Escuela Instituto Bivongi",
     date: "2012 - 2017",
