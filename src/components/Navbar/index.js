@@ -3,14 +3,33 @@ import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, B
 import { DiCodeBadge } from 'react-icons/di';
 import { FaBars } from 'react-icons/fa';
 import { FaGithub } from "react-icons/fa";
-import { Bio } from '../../data/constants';
 import { Close, CloseRounded } from '@mui/icons-material';
 import { useTheme } from 'styled-components';
+
+import { useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 
 import ReactSwitch from 'react-switch';
 
 const Navbar = ({darkMode, setDarkMode}) => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isChecked, setIsChecked] = useState(false);
+  const [t, i18n] = useTranslation("constants");
+
+  const handleLanguageChange = () => {
+    setIsChecked((prevValue) => {
+      const newCheckedValue = !prevValue;
+      if (newCheckedValue) {
+        i18n.changeLanguage("en");
+      } else {
+        i18n.changeLanguage("es");
+      }
+      return newCheckedValue;
+    });
+  };
+
+
+
+  const [isOpen, setIsOpen] = useState(false);
   const theme = useTheme()
   return (
     <Nav>
@@ -26,12 +45,12 @@ const Navbar = ({darkMode, setDarkMode}) => {
           }} />
         </MobileIcon>
         <NavItems>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href='#skills'>Skills</NavLink>
-          <NavLink href='#experience'>Experience</NavLink>
-          <NavLink href='#projects'>Projects</NavLink>
-          <NavLink href='#education'>Education</NavLink>
-          <NavLink href='#contact'>Contact</NavLink>
+          <NavLink href="#about">{t("Nav.about")}</NavLink>
+          <NavLink href='#skills'>{t("Nav.skills")}</NavLink>
+          <NavLink href='#experience'>{t("Nav.experience")}</NavLink>
+          <NavLink href='#projects'>{t("Nav.projects")}</NavLink>
+          <NavLink href='#education'>{t("Nav.education")}</NavLink>
+          <NavLink href='#contact'>{t("Nav.contact")}</NavLink>
           <NavLink style={{ display: "flex", flex: "column", justifyContent: "center", alignItems: "center" }}>
             <ReactSwitch onChange={() => setDarkMode(!darkMode)} checked={darkMode} handleDiameter={15} onColor="#854CE6"
             uncheckedIcon={
@@ -66,7 +85,7 @@ const Navbar = ({darkMode, setDarkMode}) => {
             }/>
           </NavLink>
           <NavLink style={{ display: "flex", flex: "column", justifyContent: "center", alignItems: "center" }}>
-            <ReactSwitch handleDiameter={15} onColor="#854CE6"
+            <ReactSwitch onChange={() => handleLanguageChange()} checked={isChecked} handleDiameter={15} onColor="#854CE6" offColor="#854CE6" 
             uncheckedIcon={
               <div
                 style={{
@@ -94,7 +113,7 @@ const Navbar = ({darkMode, setDarkMode}) => {
                   paddingRight: 2
                 }}
               >
-                EN
+                ES
               </div>
             }/>
           </NavLink>
@@ -102,7 +121,7 @@ const Navbar = ({darkMode, setDarkMode}) => {
         
 
         <ButtonContainer>
-          <GitHubButton style={{backgroundColor: "#1C1C27"}} href={Bio.github} target="_blank"><FaGithub/> Github Profile</GitHubButton>
+          <GitHubButton style={{backgroundColor: "#1C1C27"}} href={t("Bio.github")} target="_blank"><FaGithub/>{t("Nav.github")}</GitHubButton>
         </ButtonContainer>
         {
           isOpen &&
@@ -122,7 +141,7 @@ const Navbar = ({darkMode, setDarkMode}) => {
             <MobileLink href='#education' onClick={() => {
               setIsOpen(!isOpen)
             }}>Education</MobileLink>
-            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={Bio.github} target="_blank"> Github Profile</GitHubButton>
+            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={t("Bio.github")} target="_blank"> Github Profile</GitHubButton>
           </MobileMenu>
         }
       </NavbarContainer>

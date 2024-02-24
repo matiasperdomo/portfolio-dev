@@ -3,10 +3,12 @@ import HeroBgAnimation from '../HeroBgAnimation'
 import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, HeroInnerContainer, TextLoop, Title, Span, SubTitle,SocialMediaIcons,SocialMediaIcon, ResumeButton } from './HeroStyle'
 import HeroImg from '../../images/profile-image.jpg'
 import Typewriter from 'typewriter-effect';
-import { Bio } from '../../data/constants';
 import { FaLinkedin } from "react-icons/fa";
 
+import { useTranslation } from 'react-i18next';
+
 const HeroSection = () => {
+    const [t, i18n] = useTranslation("constants");
     return (
         <div id="about">
             <HeroContainer>
@@ -15,21 +17,21 @@ const HeroSection = () => {
                 </HeroBg>
                 <HeroInnerContainer >
                     <HeroLeftContainer id="Left">
-                        <Title>Hi, I am <br /> {Bio.name}</Title>
+                        <Title>{t("Hero.heroTittle")} <br /> {t("Bio.name")}</Title>
                         <TextLoop>
-                            I am a
+                            {t("Hero.heroPresentation")}
                             <Span>
                                 <Typewriter
                                     options={{
-                                        strings: Bio.roles,
+                                        strings: [t("Bio.roles1"), t("Bio.roles2"), t("Bio.roles3")],
                                         autoStart: true,
                                         loop: true,
                                     }}
                                 />
                             </Span>
                         </TextLoop>
-                        <SubTitle>{Bio.description}</SubTitle>
-                        <ResumeButton href={Bio.resume} target='display'><FaLinkedin /> Visit LinkedIn</ResumeButton>
+                        <SubTitle>{t("Bio.description")}</SubTitle>
+                        <ResumeButton href={t("Bio.resume")} target='display'><FaLinkedin /> {t("Hero.heroButton")}</ResumeButton>
                     </HeroLeftContainer>
 
                     <HeroRightContainer id="Right">

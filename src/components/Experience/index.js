@@ -8,9 +8,9 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import ExperienceCard from '../Cards/ExperienceCard';
-import { experiences } from '../../data/constants';
 import { IoBriefcase } from "react-icons/io5";
 
+import { useTranslation } from 'react-i18next';
 
 const Container = styled.div`
     display: flex;
@@ -76,13 +76,15 @@ const TimelineSection = styled.div`
 
 
 
-const index = () => {
+const Experience = () => {
+    const { t, i18n } = useTranslation('constants'); 
+    const experiences = t('Experience', { returnObjects: true });
     return (
         <Container id="experience">
             <Wrapper>
-                <Title><IoBriefcase /> Experience</Title>
+                <Title><IoBriefcase />{t("ExperienceHeader.tittle")}</Title>
                 <Desc>
-                    My work experience as a software engineer and working on different companies and projects.
+                    {t("ExperienceHeader.description")}
                 </Desc>
                 <TimelineSection>
                     <Timeline>
@@ -105,4 +107,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Experience

@@ -1,21 +1,3 @@
-export const Bio = {
-  name: "Matias Perdomo",
-  roles: [
-    "Full Stack Developer",
-    "Android Developer",
-    "Programmer",
-  ],
-  description:
-    "I am passionate about technology and programming! I am 23 years old, I specialize in Front End production, although I have taken courses and careers focused on all branches of programming, training me to become a Full Stack programmer. Always willing to learn new knowledge and give the best of himself.",
-  github: "https://github.com/matiasperdomo",
-  resume:
-    "https://www.linkedin.com/in/perdomomatias/",
-  linkedin: "https://www.linkedin.com/in/perdomomatias/",
-  twitter: "https://twitter.com/matiasperdomodj",
-  insta: "https://www.instagram.com/matiasperdomodj/",
-  facebook: "https://www.facebook.com/perdomomatias/",
-};
-
 export const skills = [
   {
     title: "Frontend",
@@ -239,40 +221,7 @@ export const skills = [
   },
 ];
 
-export const experiences = [
-  {
-    id: 0,
-    img: "https://img.freepik.com/free-vector/creative-gradient-code-logo_23-2148820572.jpg?size=338&ext=jpg&ga=GA1.1.1448711260.1706745600&semt=ais",
-    role: "Freelancer Web Designer",
-    company: "Personal Business ",
-    date: "2020 - 2024",
-    desc: "Based on what I have learned during these years, I have decided to do freelance web development work.",
-    skills: [
-      "HTML",
-      "CSS",
-      "Javascript",
-      "Bootstrap",
-      "Wordpress",
-      "React JS",
-    ],
-    doc: "https://htmlburger.com/blog/wp-content/uploads/2023/04/modern-website-design-examples.jpg",
-  },
-  {
-    id: 1,
-    img: "https://pbs.twimg.com/profile_images/717794779531255808/M7Af3wXB_400x400.jpg",
-    role: "Web Developer",
-    company: "CBZ La Plata",
-    date: "2018 - Oct 2024",
-    desc: "Creation and maintenance of a website in Wordpress. Then implementation of ecommerce for the sale of acoustic materials. Payments processed through Mercado Pago.",
-    skills: [
-      "Wordpress",
-      "Javascript",
-      "Elementor Pro",
-      "Woo Commerce",
-    ],
-    doc: "https://htmlburger.com/blog/wp-content/uploads/2023/04/modern-website-design-examples.jpg",
-  },
-];
+
 
 export const education = [
   {

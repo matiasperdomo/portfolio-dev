@@ -5,6 +5,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { Bio } from '../../data/constants';
 
+import { useTranslation } from 'react-i18next';
+
 const FooterContainer = styled.div`
   width: 100%;
   padding: 2rem 0;
@@ -85,26 +87,27 @@ const Copyright = styled.p`
 `;
 
 function Footer() {
+  const [t, i18n] = useTranslation("constants");
   return (
     <FooterContainer>
       <FooterWrapper>
         <Logo>Matias Perdomo</Logo>
         <Nav>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#skills">Skills</NavLink>
-          <NavLink href="#experience">Experience</NavLink>
-          <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="#education">Education</NavLink>
-          <NavLink href="#contact">Contact</NavLink>
+          <NavLink href="#about">{t("Footer.about")}</NavLink>
+          <NavLink href="#skills">{t("Footer.skills")}</NavLink>
+          <NavLink href="#experience">{t("Footer.experience")}</NavLink>
+          <NavLink href="#projects">{t("Footer.projects")}</NavLink>
+          <NavLink href="#education">{t("Footer.education")}</NavLink>
+          <NavLink href="#contact">{t("Footer.contact")}</NavLink>
         </Nav>
         <SocialMediaIcons>
-          <SocialMediaIcon href={Bio.facebook} target="display"><FacebookIcon /></SocialMediaIcon>
-          <SocialMediaIcon href={Bio.twitter} target="display"><TwitterIcon /></SocialMediaIcon>
-          <SocialMediaIcon href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
-          <SocialMediaIcon href={Bio.insta} target="display"><InstagramIcon /></SocialMediaIcon>
+          <SocialMediaIcon href={t("Bio.facebook")} target="display"><FacebookIcon /></SocialMediaIcon>
+          <SocialMediaIcon href={t("Bio.twitter")} target="display"><TwitterIcon /></SocialMediaIcon>
+          <SocialMediaIcon href={t("Bio.linkedin")} target="display"><LinkedInIcon /></SocialMediaIcon>
+          <SocialMediaIcon href={t("Bio.insta")} target="display"><InstagramIcon /></SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
-          &copy; 2024 Matias Perdomo. All rights reserved.
+          &copy; {t("Footer.copyright")}
         </Copyright>
 
       </FooterWrapper>
