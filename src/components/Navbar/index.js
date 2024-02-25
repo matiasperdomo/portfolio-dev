@@ -45,12 +45,12 @@ const Navbar = ({darkMode, setDarkMode}) => {
           }} />
         </MobileIcon>
         <NavItems>
-          <NavLink href="#about">{t("Nav.about")}</NavLink>
-          <NavLink href='#skills'>{t("Nav.skills")}</NavLink>
-          <NavLink href='#experience'>{t("Nav.experience")}</NavLink>
-          <NavLink href='#projects'>{t("Nav.projects")}</NavLink>
-          <NavLink href='#education'>{t("Nav.education")}</NavLink>
-          <NavLink href='#contact'>{t("Nav.contact")}</NavLink>
+          <NavLink href="#about">{t("nav.about")}</NavLink>
+          <NavLink href='#skills'>{t("nav.skills")}</NavLink>
+          <NavLink href='#experience'>{t("nav.experience")}</NavLink>
+          <NavLink href='#projects'>{t("nav.projects")}</NavLink>
+          <NavLink href='#education'>{t("nav.education")}</NavLink>
+          <NavLink href='#contact'>{t("nav.contact")}</NavLink>
           <NavLink style={{ display: "flex", flex: "column", justifyContent: "center", alignItems: "center" }}>
             <ReactSwitch onChange={() => setDarkMode(!darkMode)} checked={darkMode} handleDiameter={15} onColor="#854CE6"
             uncheckedIcon={
@@ -121,7 +121,7 @@ const Navbar = ({darkMode, setDarkMode}) => {
         
 
         <ButtonContainer>
-          <GitHubButton style={{backgroundColor: "#1C1C27"}} href={t("Bio.github")} target="_blank"><FaGithub/>{t("Nav.github")}</GitHubButton>
+          <GitHubButton style={{backgroundColor: "#1C1C27"}} href={t("Bio.github")} target="_blank"><FaGithub/>{t("nav.github")}</GitHubButton>
         </ButtonContainer>
         {
           isOpen &&

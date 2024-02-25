@@ -3,7 +3,6 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { Bio } from '../../data/constants';
 
 import { useTranslation } from 'react-i18next';
 
@@ -93,21 +92,21 @@ function Footer() {
       <FooterWrapper>
         <Logo>Matias Perdomo</Logo>
         <Nav>
-          <NavLink href="#about">{t("Footer.about")}</NavLink>
-          <NavLink href="#skills">{t("Footer.skills")}</NavLink>
-          <NavLink href="#experience">{t("Footer.experience")}</NavLink>
-          <NavLink href="#projects">{t("Footer.projects")}</NavLink>
-          <NavLink href="#education">{t("Footer.education")}</NavLink>
-          <NavLink href="#contact">{t("Footer.contact")}</NavLink>
+          <NavLink href="#about">{t("footer.about")}</NavLink>
+          <NavLink href="#skills">{t("footer.skills")}</NavLink>
+          <NavLink href="#experience">{t("footer.experience")}</NavLink>
+          <NavLink href="#projects">{t("footer.projects")}</NavLink>
+          <NavLink href="#education">{t("footer.education")}</NavLink>
+          <NavLink href="#contact">{t("footer.contact")}</NavLink>
         </Nav>
         <SocialMediaIcons>
-          <SocialMediaIcon href={t("Bio.facebook")} target="display"><FacebookIcon /></SocialMediaIcon>
-          <SocialMediaIcon href={t("Bio.twitter")} target="display"><TwitterIcon /></SocialMediaIcon>
-          <SocialMediaIcon href={t("Bio.linkedin")} target="display"><LinkedInIcon /></SocialMediaIcon>
-          <SocialMediaIcon href={t("Bio.insta")} target="display"><InstagramIcon /></SocialMediaIcon>
+          <SocialMediaIcon href={t("bio.facebook")} target="display"><FacebookIcon /></SocialMediaIcon>
+          <SocialMediaIcon href={t("bio.twitter")} target="display"><TwitterIcon /></SocialMediaIcon>
+          <SocialMediaIcon href={t("bio.linkedin")} target="display"><LinkedInIcon /></SocialMediaIcon>
+          <SocialMediaIcon href={t("bio.insta")} target="display"><InstagramIcon /></SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
-          &copy; {t("Footer.copyright")}
+          &copy; {t("footer.copyright")}
         </Copyright>
 
       </FooterWrapper>

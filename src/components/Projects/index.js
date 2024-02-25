@@ -2,17 +2,20 @@ import React from 'react'
 import { useState } from 'react'
 import { Container, Wrapper, Title, Desc, CardContainer, ToggleButtonGroup, ToggleButton, Divider } from './ProjectsStyle'
 import ProjectCard from '../Cards/ProjectCards'
-import { projects } from '../../data/constants'
 import { MdDevices } from "react-icons/md";
 
+import { useTranslation } from 'react-i18next';
+
 const Projects = ({openModal,setOpenModal}) => {
+  const { t, i18n } = useTranslation('constants'); 
+  const projects = t('projects', { returnObjects: true });
   const [toggle, setToggle] = useState('all');
   return (
     <Container id="projects">
       <Wrapper>
-        <Title><MdDevices /> Projects</Title>
+        <Title><MdDevices /> {t("projectsHeader.tittle")}</Title>
         <Desc>
-          I have worked on a wide range of projects. From web apps to android apps. Here are some of my projects.
+          {t("projectsHeader.description")}
         </Desc>
         <ToggleButtonGroup >
           {toggle === 'all' ?

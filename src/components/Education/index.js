@@ -7,10 +7,10 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-import { education} from '../../data/constants';
 import EducationCard from '../Cards/EducationCard';
 import { FaGraduationCap } from "react-icons/fa";
 
+import { useTranslation } from 'react-i18next';
 
 const Container = styled.div`
     display: flex;
@@ -19,7 +19,7 @@ const Container = styled.div`
     position: relative;
     z-index: 1;
     align-items: center;
-    padding: 0px 0px 60px 0px;
+    padding: 20px 0px 20px 0px;
     @media (max-width: 960px) {
         padding: 0px;
     }
@@ -79,13 +79,15 @@ const TimelineSection = styled.div`
 
 
 
-const index = () => {
+const Education = () => {
+    const { t, i18n } = useTranslation('constants'); 
+    const education = t('education', { returnObjects: true });
     return (
         <Container id="education">
             <Wrapper>
-                <Title><FaGraduationCap /> Education</Title>
+                <Title><FaGraduationCap /> {t("educationHeader.tittle")}</Title>
                 <Desc>
-                    Learn about my educational path in the world of programming!
+                    {t("educationHeader.description")}
                 </Desc>
                 <TimelineSection>
                     <Timeline>
@@ -108,4 +110,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Education;

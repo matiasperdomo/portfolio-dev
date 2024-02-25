@@ -17,21 +17,21 @@ const HeroSection = () => {
                 </HeroBg>
                 <HeroInnerContainer >
                     <HeroLeftContainer id="Left">
-                        <Title>{t("Hero.heroTittle")} <br /> {t("Bio.name")}</Title>
+                        <Title>{t("hero.heroTittle")} <br /> {t("bio.name")}</Title>
                         <TextLoop>
-                            {t("Hero.heroPresentation")}
+                            {t("hero.heroPresentation")}
                             <Span>
                                 <Typewriter
                                     options={{
-                                        strings: [t("Bio.roles1"), t("Bio.roles2"), t("Bio.roles3")],
+                                        strings: [t("bio.roles1"), t("bio.roles2"), t("bio.roles3")],
                                         autoStart: true,
                                         loop: true,
                                     }}
                                 />
                             </Span>
                         </TextLoop>
-                        <SubTitle>{t("Bio.description")}</SubTitle>
-                        <ResumeButton href={t("Bio.resume")} target='display'><FaLinkedin /> {t("Hero.heroButton")}</ResumeButton>
+                        <SubTitle>{t("bio.description")}</SubTitle>
+                        <ResumeButton href={t("bio.resume")} target='display'><FaLinkedin /> {t("hero.heroButton")}</ResumeButton>
                     </HeroLeftContainer>
 
                     <HeroRightContainer id="Right">

@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { skills } from '../../data/constants'
 import { FaConnectdevelop } from "react-icons/fa";
 
+import { useTranslation } from 'react-i18next';
 
 const Container = styled.div`
 display: flex;
@@ -122,11 +122,14 @@ const SkillImage = styled.img`
 
 
 const Skills = () => {
+  const { t, i18n } = useTranslation('constants'); 
+  const skills = t('skills', { returnObjects: true });
   return (
     <Container id="skills">
       <Wrapper>
-        <Title><FaConnectdevelop /> Skills</Title>
-        <Desc>Languages and skills that I have learned over the last 5 years
+        <Title><FaConnectdevelop /> {t("skillsHeader.tittle")}</Title>
+        <Desc>
+          {t("skillsHeader.description")}
         </Desc>
         <SkillsContainer>
           {skills.map((skill) => (

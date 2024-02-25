@@ -5,12 +5,15 @@ import emailjs from "@emailjs/browser";
 import { Snackbar } from "@mui/material";
 import { MdMessage } from "react-icons/md";
 
+import { useTranslation } from 'react-i18next';
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
   z-index: 1;
+  padding: 40px 0px 0px 0px;
   align-items: center;
   @media (max-width: 960px) {
     padding: 0px;
@@ -133,6 +136,7 @@ const ContactButton = styled.input`
 `;
 
 const Contact = () => {
+  const [t, i18n] = useTranslation("constants");
   //hooks
   const [open, setOpen] = React.useState(false);
   const form = useRef();
@@ -151,17 +155,17 @@ const Contact = () => {
   return (
     <Container id="contact">
       <Wrapper>
-        <Title><MdMessage /> Contact</Title>
+        <Title><MdMessage />{t("contact.tittle")}</Title>
         <Desc>
-          Feel free to reach out to me for any questions or opportunities!
+          {t("contact.description")}
         </Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
-          <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
-          <ContactButton type="submit" value="Send" />
+          <ContactTitle>{t("contact.tittle2")} 🚀</ContactTitle>
+          <ContactInput placeholder={t("contact.email")} name="from_email" />
+          <ContactInput placeholder={t("contact.name")} name="from_name" />
+          <ContactInput placeholder={t("contact.subject")} name="subject" />
+          <ContactInputMessage placeholder={t("contact.message")} rows="4" name="message" />
+          <ContactButton type="submit" value={t("contact.send")} />
         </ContactForm>
         <Snackbar
           open={open}

@@ -8,6 +8,7 @@ export const Container = styled.div`
     justify-content: center;
     position: relative;
     z-index: 1;
+    padding: 40px 0px 0px 0px;
     align-items: center;
     clip-path: polygon(0 0, 100% 0, 100% 100%,100% 98%, 0 100%);
 `;
