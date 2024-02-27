@@ -358,10 +358,10 @@ const projects = [
   },
   {
     id: 0,
-    title: "Project Name",
+    title: "Chatty-Bot",
     date: "2023",
     description:
-      "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
+      "",
     image:
       "https://htmlburger.com/blog/wp-content/uploads/2023/04/modern-website-design-examples.jpg",
     tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
@@ -406,16 +406,16 @@ const projects = [
 
   {
     id: 3,
-    title: "Project Name",
+    title: "Sistema de Venta - (C# / MySQL)",
     date: "2022",
     description:
-      "App Is Currently In Playstore 100+ Downloads. This Project proposes an “Expense Tracking App”. Keep track of your personal expenses and compare them to your monthly income with the budget planner. It has Google Drive Cloud API for Backup of User Room Database. Made with Kotlin in MVVM Architecture & Live Data.",
+      "El siguiente proyecto forma parte de un sistema de venta desarrollado en C# y vinculado a una base datos MySQL. Como ejemplo se tomo la marca HyperX, desarrolle un login, roles de usuarios, carga de productos, clientes, generación de ventas y posibilidad de exportar formato venta de tipo factura.",
     image:
-      "https://htmlburger.com/blog/wp-content/uploads/2023/04/modern-website-design-examples.jpg",
-    tags: ["Kotlin", "MVVM", "Room Database", "Google Drive Cloud API"],
-    category: "android app",
-    github: "",
-    webapp: "",
+      "https://r2.easyimg.io/fjpoismsz/captura_de_pantalla_2024-02-26_094958.png",
+    tags: ["C#", "MySQL", "Visual Studio"],
+    category: "others",
+    github: "https://github.com/matiasperdomo/HyperX-SistemaVenta",
+    webapp: "https://github.com/matiasperdomo/HyperX-SistemaVenta",
   },
   {
     id: 4,
@@ -506,8 +506,8 @@ const education = [
     school: "Escuela Instituto Bivongi",
     date: "2012 - 2017",
     grade: "",
-    desc: "School located in the city of La Plata. Here I finished my secondary education.",
-    degree: "Secondary Education",
+    desc: "Colegio ubicado en la ciudad de La Plata. Aquí terminé mi educación secundaria.",
+    degree: "Educación Secundaria",
   },
 ];
 

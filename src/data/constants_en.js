@@ -406,16 +406,16 @@
   
     {
       id: 3,
-      title: "Project Name",
+      title: "Sales System - (C# / MySQL)",
       date: "2022",
       description:
-        "App Is Currently In Playstore 100+ Downloads. This Project proposes an “Expense Tracking App”. Keep track of your personal expenses and compare them to your monthly income with the budget planner. It has Google Drive Cloud API for Backup of User Room Database. Made with Kotlin in MVVM Architecture & Live Data.",
+        "The following project is part of a sales system developed in C# and linked to a MySQL database. As an example, the HyperX brand was taken, I developed a login, user roles, product loading, clients, sales generation and the possibility of exporting invoice-type sales format.",
       image:
-        "https://htmlburger.com/blog/wp-content/uploads/2023/04/modern-website-design-examples.jpg",
-      tags: ["Kotlin", "MVVM", "Room Database", "Google Drive Cloud API"],
-      category: "android app",
-      github: "",
-      webapp: "",
+        "https://r2.easyimg.io/fjpoismsz/captura_de_pantalla_2024-02-26_094958.png",
+      tags: ["C#", "MySQL", "Visual Studio"],
+      category: "others",
+      github: "https://github.com/matiasperdomo/HyperX-SistemaVenta",
+      webapp: "https://github.com/matiasperdomo/HyperX-SistemaVenta",
     },
     {
       id: 4,

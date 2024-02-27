@@ -121,7 +121,7 @@ const Navbar = ({darkMode, setDarkMode}) => {
         
 
         <ButtonContainer>
-          <GitHubButton style={{backgroundColor: "#1C1C27"}} href={t("Bio.github")} target="_blank"><FaGithub/>{t("nav.github")}</GitHubButton>
+          <GitHubButton style={{backgroundColor: "#1C1C27"}} href={t("bio.github")} target="_blank"><FaGithub/>{t("nav.github")}</GitHubButton>
         </ButtonContainer>
         {
           isOpen &&
@@ -141,7 +141,7 @@ const Navbar = ({darkMode, setDarkMode}) => {
             <MobileLink href='#education' onClick={() => {
               setIsOpen(!isOpen)
             }}>Education</MobileLink>
-            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={t("Bio.github")} target="_blank"> Github Profile</GitHubButton>
+            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={t("bio.github")} target="_blank"> Github Profile</GitHubButton>
           </MobileMenu>
         }
       </NavbarContainer>
