@@ -299,7 +299,7 @@ const experience = [
 ];
 
 const projectsHeader = {
-  tittle:"Projectos",
+  tittle:"Proyectos",
   description:"He trabajado en una amplia gama de proyectos. Desde aplicaciones web hasta aplicaciones de Android. Éstos son algunos de mis trabajos."
 };
 
