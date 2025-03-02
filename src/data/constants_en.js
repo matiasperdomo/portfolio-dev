@@ -2,7 +2,7 @@
     about: "About",
     skills: "Skills",
     experience: "Experience",
-    projects: "Proyects",
+    projects: "Projects",
     education: "Education",
     contact: "Contact",
     github: " Github Profile"
@@ -20,7 +20,7 @@
     roles2:"Android Developer",
     roles3:"Programmer",
     description:
-      "I am passionate about technology and programming! I am 23 years old, I specialize in Front End production, although I have taken courses and careers focused on all branches of programming, training me to become a Full Stack programmer. Always willing to learn new knowledge and give the best of himself.",
+      "I am passionate about technology and programming! I am 24 years old, I specialize in Front End production, although I have taken courses and careers focused on all branches of programming, training me to become a Full Stack programmer. Always willing to learn new knowledge and give the best of himself.",
     github: "https://github.com/matiasperdomo",
     resume:
       "https://www.linkedin.com/in/perdomomatias/",
@@ -532,7 +532,7 @@
     copyright: "2024 Matias Perdomo. All rights reserved.",
   };
 
-  export default {
+  const constants = {
     nav,
     hero,
     bio,
@@ -548,4 +548,5 @@
     footer,
   };
   
+  export default constants;
 

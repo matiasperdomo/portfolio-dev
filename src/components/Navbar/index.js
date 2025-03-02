@@ -52,7 +52,7 @@ const Navbar = ({darkMode, setDarkMode}) => {
           <NavLink href='#education'>{t("nav.education")}</NavLink>
           <NavLink href='#contact'>{t("nav.contact")}</NavLink>
           <NavLink style={{ display: "flex", flex: "column", justifyContent: "center", alignItems: "center" }}>
-            <ReactSwitch onChange={() => setDarkMode(!darkMode)} checked={darkMode} handleDiameter={15} onColor="#854CE6"
+            <ReactSwitch onChange={() => setDarkMode(!darkMode)} checked={darkMode} handleDiameter={15} onColor="#3380ff"
             uncheckedIcon={
               <div
                 style={{
@@ -85,7 +85,7 @@ const Navbar = ({darkMode, setDarkMode}) => {
             }/>
           </NavLink>
           <NavLink style={{ display: "flex", flex: "column", justifyContent: "center", alignItems: "center" }}>
-            <ReactSwitch onChange={() => handleLanguageChange()} checked={isChecked} handleDiameter={15} onColor="#854CE6" offColor="#854CE6" 
+            <ReactSwitch onChange={() => handleLanguageChange()} checked={isChecked} handleDiameter={15} onColor="#3380ff" offColor="#3380ff" 
             uncheckedIcon={
               <div
                 style={{
@@ -94,7 +94,7 @@ const Navbar = ({darkMode, setDarkMode}) => {
                   alignItems: "center",
                   height: "100%",
                   fontSize: 15,
-                  color: "orange",
+                  color: "white",
                   paddingRight: 2
                 }}
               >
@@ -109,7 +109,7 @@ const Navbar = ({darkMode, setDarkMode}) => {
                   alignItems: "center",
                   height: "100%",
                   fontSize: 15,
-                  color: "orange",
+                  color: "white",
                   paddingRight: 2
                 }}
               >
@@ -121,7 +121,7 @@ const Navbar = ({darkMode, setDarkMode}) => {
         
 
         <ButtonContainer>
-          <GitHubButton style={{backgroundColor: "#1C1C27"}} href={t("bio.github")} target="_blank"><FaGithub/>{t("nav.github")}</GitHubButton>
+          <GitHubButton style={{backgroundColor: "#07102a"}} href={t("bio.github")} target="_blank"><FaGithub/>{t("nav.github")}</GitHubButton>
         </ButtonContainer>
         {
           isOpen &&

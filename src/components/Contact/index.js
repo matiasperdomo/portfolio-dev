@@ -2,9 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { Snackbar } from "@mui/material";
+import { Snackbar, Alert } from "@mui/material";
 import { MdMessage } from "react-icons/md";
-
 import { useTranslation } from 'react-i18next';
 
 const Container = styled.div`
@@ -66,7 +65,8 @@ const ContactForm = styled.form`
   background-color: ${({ theme }) => theme.card};
   padding: 32px;
   border-radius: 16px;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  border: 1px solid rgba(0, 191, 255, 0.5); // Borde celeste con 50% de transparencia
+  box-shadow: rgba(23, 92, 230, 0.2) 0px 4px 24px;
   margin-top: 28px;
   gap: 12px;
 `;
@@ -122,9 +122,7 @@ const ContactButton = styled.input`
     hsla(294, 100%, 50%, 1) 100%
   );
   background: -webkit-linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
+    225deg,#2b4a82 0%,#4d79ff 80%
   );
   padding: 13px 16px;
   margin-top: 2px;
@@ -133,23 +131,53 @@ const ContactButton = styled.input`
   color: ${({ theme }) => theme.white};
   font-size: 18px;
   font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
 `;
 
 const Contact = () => {
   const [t, i18n] = useTranslation("constants");
   //hooks
   const [open, setOpen] = React.useState(false);
+  const [error, setError] = React.useState('');
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
-    //   .then((result) => {
-    //     setOpen(true);
-    //     form.current.reset();
-    //   }, (error) => {
-    //     console.log(error.text);
-    //   });
+    const formData = new FormData(form.current);
+    const fromEmail = formData.get('from_email');
+    const fromName = formData.get('from_name');
+    const subject = formData.get('subject');
+    const message = formData.get('message');
+
+    // Validación de campos vacíos
+    if (!fromEmail || !fromName || !subject || !message) {
+      setError('Por favor completar todos los campos!');
+      return;
+    }
+
+    // Validación de formato de email
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(fromEmail)) {
+      setError('Por favor ingresar un mail válido!');
+      return;
+    }
+
+    emailjs.sendForm('service_66t1x9g', 'template_9pzbyrs', form.current, 'HpIncVeq2bqaJfpoQ')
+      .then((result) => {
+        setOpen(true);
+        form.current.reset();
+      }, (error) => {
+        console.log(error.text);
+      });
   };
 
   return (
@@ -171,9 +199,20 @@ const Contact = () => {
           open={open}
           autoHideDuration={6000}
           onClose={() => setOpen(false)}
-          message="Email sent successfully!"
-          severity="success"
-        />
+        >
+          <Alert onClose={() => setOpen(false)} severity="success">
+            Email enviado correctamente!
+          </Alert>
+        </Snackbar>
+        <Snackbar
+          open={Boolean(error)}
+          autoHideDuration={6000}
+          onClose={() => setError('')}
+        >
+          <Alert onClose={() => setError('')} severity="error">
+            {error}
+          </Alert>
+        </Snackbar>
       </Wrapper>
     </Container>
   );

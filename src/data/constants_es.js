@@ -20,7 +20,7 @@ const bio = {
   roles2:"Android Developer",
   roles3:"Programador",
   description:
-    "¡Me apasiona la tecnología y la programación! Tengo 23 años, me especializo en producción Front End, aunque he realizado cursos y carreras enfocadas a todas las ramas de la programación, capacitándome para convertirme en programador Full Stack. Siempre dispuesto a aprender nuevos conocimientos y dar lo mejor de sí mismo.",
+    "¡Me apasiona la tecnología y la programación! Tengo 24 años, me especializo en producción Front End, aunque he realizado cursos y carreras enfocadas a todas las ramas de la programación, capacitándome para convertirme en programador Full Stack. Siempre dispuesto a aprender nuevos conocimientos y dar lo mejor de sí mismo.",
   github: "https://github.com/matiasperdomo",
   resume:
     "https://www.linkedin.com/in/perdomomatias/",
@@ -532,7 +532,7 @@ const footer = {
   copyright: "2024 Matias Perdomo. Todos los derechos reservados",
 };
 
-export default {
+const constants = {
   nav,
   hero,
   bio,
@@ -548,3 +548,4 @@ export default {
   footer,
 };
 
+export default constants;
